@@ -58,7 +58,7 @@ class BlockColliderDocker(object):
         if kwargs['walletkey'] != '':
             self._walletkey = kwargs['walletkey']
 
-        if kwargs['command'] != 'install':
+        if kwargs['command'] != 'install' and 'list' not in kwargs['command']:
             try:
                 self._bcnode = self._docker.images.get('%s:%s'%(self._repo,self._tag))
             except docker.errors.ImageNotFound as err:
@@ -83,7 +83,7 @@ class BlockColliderDocker(object):
                                         name=container_name,
                                         ports = {'3000/tcp':3000+iproc,
                                                  '9090/tcp':9090+iproc},
-                                        cpuset_cpus='%d-%d'%(iproc,iproc+self._nprocpergroup),
+                                        cpuset_cpus='%d-%d'%(iproc,iproc+self._nprocpergroup-1),
                                         restart_policy = restart_dict,
                                         detach=True)
             
