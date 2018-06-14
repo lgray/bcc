@@ -31,7 +31,7 @@ import argparse
 import docker
 
 parser = argparse.ArgumentParser(description='Command (multiple) block collider instances.')
-parser.add_argument('command', help='the command to execute to BC Miner: start, stop, restart, install, purge')
+parser.add_argument('command', help='the command to execute to BC Miner: start, stop, restart, install, purge, listImages, listContainers')
 parser.add_argument('--forever', default=False, action='store_true', help='instruct docker to run BC forever if it exits of its own accord')
 parser.add_argument('--nproc', type=int, default=1, help='total number of processors available for mining')
 parser.add_argument('--nprocpergroup', type=int, default=1, help='number of processors per docker instance')
