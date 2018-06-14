@@ -36,6 +36,6 @@ N.B. -> replace my wallet key with yours, unless you're a very generous person
 
 `python bc_controller.py purge --tag=0.5.0` -- remove the testnet miner
 
-`python bc_controller.py purge` -- remote the mainnet launcher
+`python bc_controller.py purge` -- remove the mainnet launcher
 
 `python bc_controller.py --help` -- get more information about options
