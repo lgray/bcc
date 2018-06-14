@@ -6,7 +6,9 @@ Should work on windows, mac, linux.
 
 # Requirements
 python 2.7
+
 docker_py package -> [sudo] pip install docker
+
 an active running docker installation
 
 # Usage
