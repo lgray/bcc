@@ -11,6 +11,8 @@ an active running docker installation
 
 # Usage
 
+N.B. -> replace my wallet key with yours, unless you're a very generous person
+
 `python bc_controller.py install` -- install the 'latest' repository 
 
 `python bc_controller.py install --tag=0.5.0` -- install the last 'testnet' repository (useful for testing this script)
